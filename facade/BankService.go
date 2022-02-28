@@ -4,6 +4,19 @@ import (
 	"fmt"
 )
 
+/*
+
+KEY DESIGN PRINCIPLES :	Encapsulation, information hiding, separation of concerns
+
+single simplified interface for client classes to interact with sub-system
+
+(a facade simply acts as a point of entry into your sub-system)
+(wrapper class that ENCAPSULATES a sub-system in order to hide the complexity)
+(a facade class can be used to wrap all the interfaces and classes for a sub-system)
+(INFORMATION HIDING)
+
+*/
+
 type BankService struct {
 	bankAccounts map[int]IAccount
 }
