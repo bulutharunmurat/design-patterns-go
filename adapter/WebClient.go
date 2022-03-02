@@ -11,14 +11,6 @@ type ClientReqObject struct {
 	id   string
 }
 
-func (w *WebClient) makeClientObject(name, id string) ClientReqObject {
-	clientReqObject := ClientReqObject{
-		name: name,
-		id:   id,
-	}
-	return clientReqObject
-}
-
 func (w *WebClient) DoWork() {
 	clientObject := w.makeClientObject("req_name", "req_id")
 	status := w.WebRequster.makeRequest(clientObject)
@@ -28,4 +20,12 @@ func (w *WebClient) DoWork() {
 	} else {
 		fmt.Println("request NOT succeed")
 	}
+}
+
+func (w *WebClient) makeClientObject(name, id string) ClientReqObject {
+	clientReqObject := ClientReqObject{
+		name: name,
+		id:   id,
+	}
+	return clientReqObject
 }
