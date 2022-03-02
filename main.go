@@ -1,8 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"design-patterns-go/adapter"
+)
 
 func main() {
 
-	fmt.Println("deneme")
+	host := "https://google.com"
+	service := adapter.WebService{Host: host}
+	a := adapter.WebAdapter{}
+	a.Connect(service)
+
+	client := adapter.WebClient{WebRequster: &a}
+
+	client.DoWork()
+
 }

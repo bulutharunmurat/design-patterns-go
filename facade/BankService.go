@@ -10,9 +10,9 @@ KEY DESIGN PRINCIPLES :	Encapsulation, information hiding, separation of concern
 
 single simplified interface for client classes to interact with sub-system
 
-(a facade simply acts as a point of entry into your sub-system)
-(wrapper class that ENCAPSULATES a sub-system in order to hide the complexity)
-(a facade class can be used to wrap all the interfaces and classes for a sub-system)
+(adapter facade simply acts as adapter point of entry into your sub-system)
+(wrapper class that ENCAPSULATES adapter sub-system in order to hide the complexity)
+(adapter facade class can be used to wrap all the interfaces and classes for adapter sub-system)
 (INFORMATION HIDING)
 
 */
